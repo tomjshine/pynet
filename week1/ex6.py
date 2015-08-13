@@ -15,6 +15,5 @@ with open('json.txt', 'w') as f:
     json.dump(my_list, f, sort_keys=True, indent=4)
 
 # dump to yaml
-
 with open('yaml.txt', 'w') as f:
     yaml.dump(my_list, f)
