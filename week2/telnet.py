@@ -8,6 +8,7 @@ import sys
 TELNET_PORT = 23
 TELNET_TIMEOUT = 6
 
+
 def login(remote_conn, username, password):
     output = remote_conn.read_until("sername:", TELNET_TIMEOUT)
     remote_conn.write(username + '\n')
@@ -46,4 +47,4 @@ def main():
     remote_conn.close()
 
 if __name__ == "__main__":
-    main()
+    main() 
