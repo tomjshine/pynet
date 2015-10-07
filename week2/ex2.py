@@ -26,12 +26,16 @@ def send_command(cmd):
     return remote_conn.read_very_eager()
     
 ip_addr = '50.76.53.27'
-cmd = 'show ip int brief'
 
 remote_conn = telnet_connect(ip_addr)
 output = login(remote_conn)
 
 
+cmd = 'terminal length 0'
+output = send_command(cmd)
+
+
+cmd = 'show ip interface brief'
 output = send_command(cmd)
 
 print output
